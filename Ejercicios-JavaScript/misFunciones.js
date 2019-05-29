@@ -46,3 +46,62 @@ function convertir(id_elem, valor_elem) {
     }
 
 }}
+
+function suma() {
+
+    document.opMat.sum_total.value = Number(document.opMat.sum_num1.value) + Number(document.opMat.sum_num2.value);
+
+}
+
+function resta() {
+
+    document.opMat.res_total.value = Number(document.opMat.res_num1.value) - Number(document.opMat.res_num2.value);
+
+}
+
+function multi() {
+
+    document.opMat.mul_total.value = Number(document.opMat.mul_num1.value) * Number(document.opMat.mul_num2.value);
+
+}
+
+function divi() {
+
+    document.opMat.div_total.value = Number(document.opMat.div_num1.value) / Number(document.opMat.div_num2.value);
+
+}
+
+function gradosRadianes(id_elem, valor) {
+
+
+
+            if(id_elem == 'grados'){
+                document.getElementById("radianes").value = valor * Math.PI/180;
+
+
+    }
+            if(id_elem == 'radianes'){
+                document.getElementById("grados").value = valor * 180/Math.PI;
+
+
+            }
+
+
+}
+
+function mostrarDiv(id_elem) {
+
+    if (id_elem == "ocultarDiv"){
+
+        document.getElementById("unDiv").style.display = 'none';
+
+
+    }
+    if (id_elem == "mostrarDiv"){
+
+        document.getElementById("unDiv").style.display = 'block';
+
+
+    }
+
+}
