@@ -5,6 +5,7 @@
     <title>Canvas con Circulo y Cuadrado</title>
     <link href="https://fonts.googleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
     <link href="miEstilo.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="misFunciones.js"></script>
 </head>
 
 <body>
@@ -14,15 +15,16 @@
 <div class="centrado div-conver">
     <form>
         <p>
-            <label for="posicionX"> X</label> = <input id="posicionX" type="text" name="inp_x">
+            <label for="posicionX"> X</label> = <input id="posicionX" type="text" name="inp_x" onchange="auto(this.id)">
         </p>
         <p>
-            <label for="posicionY"> Y</label> = <input id="posicionY" type="text" name="inp_y">
+            <label for="posicionY"> Y</label> = <input id="posicionY" type="text" name="inp_y" onchange="auto(this.id)">
         </p>
-        <button>
-            Dibujar!
-        </button>
+
     </form>
+    <button onclick="auto()">
+    Dibujar!
+</button>
 </div>
 
 <canvas id="myCanvas" class="ejer">

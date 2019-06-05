@@ -89,7 +89,7 @@ function gradosRadianes(id_elem, valor) {
 
 }
 
-function mostrarDiv(id_elem) {
+function MostrarDiv(id_elem) {
 
     if (id_elem == "ocultarDiv"){
 
@@ -102,6 +102,72 @@ function mostrarDiv(id_elem) {
         document.getElementById("unDiv").style.display = 'block';
 
 
+    }
+
+}
+
+function dibujar(x, y) {
+
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    ctx.fillStyle = "#000000";
+
+    ctx.beginPath();
+    ctx.rect(x,y,30,40);
+    ctx.fill();
+    ctx.closePath();
+}
+
+function circulo(x,y){
+
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    ctx.fillStyle = "#ac0003";
+
+    ctx.beginPath();
+    ctx.arc(x,y,10,40,0,2*Math.PI);
+    ctx.fill();
+    ctx.closePath();
+
+
+}
+
+function dibujarCuadriculado() {
+
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#000";
+    ctx.beginPath();
+
+
+    for(var i=10;i<canvas.width;i += 10){
+
+        ctx.moveTo(i,0);
+        ctx.lineTo(i,canvas.height);
+    }
+    for(var j=10;j<canvas.height;j += 10){
+
+        ctx.moveTo(0,j);
+        ctx.lineTo(canvas.width,j);
+    }
+
+    ctx.stroke();
+    ctx.closePath();
+}
+
+function auto(posicionX,) {
+
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    var img = new Image();
+
+    img.src = "images/124210-full.png";
+
+    img.onload = function(){
+        ctx.drawImage(img, x,y);
     }
 
 }
